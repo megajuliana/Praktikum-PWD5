@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertemuan 5 - Toko Online Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header-->
+    <header>
+        <h1>Toko Online</h1>
+        <div class="search-box">
+            <input type="text" id="input-search" placeholder="Cari produk...">
+        </div>
+        <button id="toggle-cart-btn">🛒 Keranjang (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="container">
+        <!-- Daftar Produk -->
+        <section class="products-section">
+            <h2>Daftar Produk</h2>
+            <div id="product-list" class="product-grid">
+                <!-- Produk akan dirender secara dinamis menggunakan JS DOM -->
+            </div>
+        </section>
+
+        <!-- Slide/Panel Keranjang Belanja -->
+        <aside id="cart-panel" class="cart-panel">
+            <h2>Keranjang Belanja</h2>
+            <ul id="cart-list">
+                <!-- Item keranjang dimasukkan via jQuery -->
+            </ul>
+
+            <div class="cart-summary">
+                <p>Total Item: <span id="total-items">0</span></p>
+                <p>Total Harga: <strong>Rp <span id="total-price">0</span></strong></p>
+            </div>
+
+            <div class="cart-actions">
+                <button id="btn-clear" class="btn-secondary">Kosongkan Keranjang</button>
+                <button id="btn-checkout" class="btn-primary">Checkout</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Ringkasan Pesanan (Pop-up Result) -->
+    <section id="checkout-summary" class="summary-box" style="display: none;">
+        <h2>Ringkasan Pesanan</h2>
+        <div id="summary-details"></div>
+    </section>
+
+    <!-- CDN jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
